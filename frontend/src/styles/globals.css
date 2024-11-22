@@ -1,0 +1,28 @@
+/* globals.css */
+
+/* Import the fonts CSS file */
+@import './fonts.css';
+
+/* Tailwind CSS base styles */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* You can also add custom global styles below */
+
+/* Example of setting some default font family */
+body {
+    font-family: 'CustomThaiFont', sans-serif;
+    background-color: #f7fafc; /* Light gray background */
+    color: #333; /* Dark text color */
+}
+
+/* Example of some custom text styles */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'CustomThaiFont', sans-serif;
+}
+
+/* You can add more styles as needed */
+
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@700&display=swap');
+

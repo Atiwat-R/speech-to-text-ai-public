@@ -1,0 +1,18 @@
+{
+    "thai_input": {
+        "eng_text": {
+            "source_lang": "en-US",
+            "translated_lang": "th-TH",
+            "source_lang_font": "px-[300px] text-7xl text-center text-white mb-10 font-bold font-thai",
+            "translated_lang_font": "px-[300px] text-7xl text-center text-white text-stroke mb-10 font-bold font-mono"
+        }
+    },
+    "eng_input": {
+        "thai_text": {
+            "source_lang": "th-TH",
+            "translated_lang": "en-US",
+            "source_lang_font": "px-[300px] text-7xl text-center text-white text-stroke mb-10 font-bold font-mono",
+            "translated_lang_font": "px-[300px] text-7xl text-center text-white mb-10 font-bold font-thai"
+        }
+    }
+}
