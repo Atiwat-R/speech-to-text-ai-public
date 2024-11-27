@@ -20,4 +20,7 @@ Switch language
 - Go to backend/main.py
 - Comment out "language" variable, and uncomment another "language" variable next to it
 
-Written by Atiwat Rachatawarn
+
+In Window Powershell:
+- May need to use py as cmd instead of python3
+- Different venv startup

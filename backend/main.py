@@ -28,7 +28,7 @@ CHUNK = int(RATE / 10)  # 100ms
 STREAMING_LIMIT = 290000  # 290 seconds (to leave some buffer before the 305 seconds limit)
 INACTIVITY_TIMEOUT = 5.0
 
-SENTENCE_CHAR_LIMIT = 150
+SENTENCE_CHAR_LIMIT = 100
 
 # Thai -> Eng
 language= {
@@ -58,7 +58,7 @@ GOOGLE_SERVICE_KEY = {
 
 profanities = []
 
-with open('../profanities.json', 'r') as file:
+with open('../profanities.json', 'r', encoding='utf-8') as file:
     profanities = json.load(file)
 
 
@@ -152,7 +152,7 @@ def listen_print_loop(responses):
             print(logged, flush=True)
 
             # Append records in log file
-            with open("../transcription/log.txt", "a") as file:
+            with open("../transcription/log.txt", "a", encoding='utf-8') as file:
                 file.write(strip_ansi_codes(logged))
 
     final_transcript = ""  # To accumulate the final output
@@ -194,9 +194,9 @@ def listen_print_loop(responses):
             log_records(transcript=transcript, transcript_confidence=transcript_confidence)
 
         # Write the final transcript to the file, replacing the previous content
-        with open(file_path, "w") as file:
+        with open(file_path, "w", encoding='utf-8') as file:
             file.write(strip_ansi_codes(final_transcript))
-        with open(file_path_translate, "w") as file:
+        with open(file_path_translate, "w", encoding='utf-8') as file:
             file.write(strip_ansi_codes(final_translation))
 
         final_transcript = ""
@@ -216,7 +216,7 @@ def listen_print_loop(responses):
                 final_transcript += f"{TextColor.create_colored_text(transcript, TextColor.GREEN)}\n"
                 print(final_transcript, flush=True)
                 
-                with open(file_path, "w") as file:
+                with open(file_path, "w", encoding='utf-8') as file:
                     file.write(strip_ansi_codes(final_transcript))
 
                 final_transcript = ""

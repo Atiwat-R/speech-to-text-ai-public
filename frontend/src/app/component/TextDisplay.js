@@ -22,7 +22,8 @@ const TextDisplay = ({ path }) => {
             console.log(data)
             setText(data);
         } catch (error) {
-            console.error('Error fetching the text file:', error);
+            // console.error('Error fetching the text file:', error);
+            return
         }
     };
 
